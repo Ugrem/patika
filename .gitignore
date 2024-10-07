@@ -1,0 +1,29 @@
+package miniProjekts2;
+
+import java.util.Scanner;
+
+public class taksimetre {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+
+		double mesafe, tutar = 20, s = 2.2, t;
+
+		System.out.println("Mesafe= ");
+		mesafe = input.nextDouble();
+t=mesafe*s;
+		if (t <= 20) {
+			
+			//tutar = tutar + (mesafe * s) - s;
+			System.out.println("Tutar= " + tutar);
+		} else if (t >= 20) {
+		
+			System.out.println("Tutar= "+t);
+			// for(i=0;i)
+
+		}
+
+	}
+
+}
