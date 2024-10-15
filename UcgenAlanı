@@ -1,0 +1,20 @@
+package Hello;
+
+import java.util.Scanner;
+
+public class UcgenAlanı {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		double a, h, alan;
+
+		System.out.print("a = ");
+		a = input.nextDouble();
+		System.out.print("h =");
+		h = input.nextDouble();
+		alan = (a * h) / 2;
+		System.out.print("alan= " + alan);
+	}
+
+}
