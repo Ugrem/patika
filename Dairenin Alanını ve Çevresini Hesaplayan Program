@@ -1,0 +1,23 @@
+package Hello;
+
+import java.util.Scanner;
+
+public class daireCevreAlan {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int r;
+		double a, alan, pi = 3.14;
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("R giriniz");
+		r = input.nextInt();
+		
+		System.out.println("a giriniz");
+		a = input.nextInt();
+		
+alan=((pi * (r*r) * a) / 360);
+System.out.println(alan);
+	}
+
+}
