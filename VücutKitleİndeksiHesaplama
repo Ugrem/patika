@@ -1,0 +1,33 @@
+package Hello;
+
+import java.util.Scanner;
+
+public class VucutKitleİndexi {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+
+		double b, k, bki;
+		System.out.print("Boyunuz (m): ");
+		b = input.nextDouble();
+		System.out.print("Kilonuz (kg): ");
+		k = input.nextDouble();
+		bki = k / (b * b);
+		if (bki < 18.5) {
+			System.out.print("Zayıf");
+		} else if (bki >= 18.5 && bki < 25) {
+			System.out.print("Normal");
+		} else if (bki >= 25 && bki < 30) {
+			System.out.print("Fazla kilolu");
+		} else if (bki >= 30 && bki < 35) {
+			System.out.print("I. derece obez");
+		} else if (bki >= 35 && bki < 40) {
+			System.out.print("II. derece obez");
+
+		} else {
+			System.out.print("III. derece morbid");
+		}
+
+	}
+}
