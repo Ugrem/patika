@@ -1,0 +1,30 @@
+package Hello;
+
+import java.util.Scanner;
+
+public class finalNotu {
+
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        Scanner input = new Scanner(System.in);
+
+        int fizik, kimya,tarih,muzik,turkce;
+        
+
+        System.out.println("Fizik Notunuzu giriniz: ");
+        fizik = input.nextInt();
+        System.out.println("kimya Notunuzu giriniz: ");
+        kimya = input.nextInt();
+        System.out.println("tarih Notunuzu giriniz: ");
+        tarih = input.nextInt();
+        System.out.println("muzik Notunuzu giriniz: ");
+        muzik = input.nextInt();
+        System.out.println("turkce Notunuzu giriniz: ");
+        turkce = input.nextInt();
+ 
+double ortalama=((fizik+kimya+tarih+muzik+turkce)/5);
+   String rfinal =(ortalama>60)? "Sınıfı Geçtin":"Sınıfta Kaldın";
+        System.out.print(rfinal);
+    }
+
+}
