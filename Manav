@@ -1,0 +1,34 @@
+package Hello;
+
+import java.util.Scanner;
+
+public class ders2 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
+		double armut = 2.14, elma = 3.67, domates = 1.11, muz = 0.95, patlican = 5;
+		double Armut, Elma , Domates, Muz , Patlican ;
+		
+
+		System.out.println("Armut kac kilo?  ");
+		Armut = input.nextInt();
+
+		System.out.println("Elma kac kilo?  ");
+		Elma = input.nextInt();
+
+		System.out.println("Domates kac kilo?  ");
+		Domates = input.nextInt();
+
+		System.out.println("Muz kac kilo?  ");
+		Muz = input.nextInt();
+
+		System.out.println("Patlican kac kilo?  ");
+		Patlican = input.nextInt();
+		
+		double tutar=((armut*Armut)+(elma*Elma)+(domates*Domates)+(muz*Muz)+(patlican*Patlican));
+		System.out.println("Tutariniz= "+tutar);
+
+	}
+
+}
