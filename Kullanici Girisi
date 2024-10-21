@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        String username, password;
+        boolean isLoggedIn = false;
+
+        for (int attempt = 0; attempt < 5; attempt++) {
+            System.out.println("Kullanici Adiniz: ");
+            username = input.nextLine();
+
+            System.out.println("Sifreniz: ");
+            password = input.nextLine();
+
+            if (username.equals("patika") && password.equals("patika123")) {
+                System.out.println("Giris yaptiniz!");
+                isLoggedIn = true;
+                break; // Exit the loop if login is successful
+            } else {
+                System.out.println("Bilgileriniz yanlistir!");
+                System.out.println("Kalan deneme hakki: " + (4 - attempt));
+            }
+        }
+
+        if (!isLoggedIn) {
+            System.out.println("Giris hakkiniz dolmustur. Program sonlandiriliyor.");
+        }
+    }
+}
