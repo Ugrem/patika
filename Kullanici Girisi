@@ -3,29 +3,49 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-
-        String username, password;
+        String correctUsername = "Batuhan";
+        String correctPassword = "1234b";
         boolean isLoggedIn = false;
 
-        for (int attempt = 0; attempt < 5; attempt++) {
-            System.out.println("Kullanici Adiniz: ");
-            username = input.nextLine();
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Kullanici Adiniz: ");
+            String username = input.nextLine();
 
-            System.out.println("Sifreniz: ");
-            password = input.nextLine();
+            System.out.print("Sifreniz: ");
+            String password = input.nextLine();
 
-            if (username.equals("patika") && password.equals("patika123")) {
+            if (username.equals(correctUsername) && password.equals(correctPassword)) {
                 System.out.println("Giris yaptiniz!");
                 isLoggedIn = true;
-                break; // Exit the loop if login is successful
+                break;
             } else {
                 System.out.println("Bilgileriniz yanlistir!");
-                System.out.println("Kalan deneme hakki: " + (4 - attempt));
+
+                System.out.print("Sifirlamak ister misiniz (1 => Evet, 2 => Hayir): ");
+                int sifirlama = input.nextInt();
+                input.nextLine(); // Satır sonunu temizler
+
+                if (sifirlama == 1) {
+                    System.out.print("Yeni sifrenizi giriniz: ");
+                    String newPassword = input.nextLine();
+
+                    if (newPassword.equals(correctPassword)) {
+                        System.out.println("Bu sifre daha once kullanildi. Baska bir sifre giriniz!");
+                    } else {
+                        correctPassword = newPassword;
+                        System.out.println("Yeni sifreniz basariyla kaydedildi.");
+                    }
+                } else if (sifirlama != 2) {
+                    System.out.println("Geçersiz bir secim yaptiniz. Program sonlandiriliyor.");
+                    return;
+                }
             }
         }
 
         if (!isLoggedIn) {
             System.out.println("Giris hakkiniz dolmustur. Program sonlandiriliyor.");
         }
+
+        input.close();
     }
 }
