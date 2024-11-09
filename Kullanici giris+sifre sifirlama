@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String correctUsername = "Patika";
+        String correctPassword = "Patika123";
+        boolean isLoggedIn = false;
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Kullanici Adiniz: ");
+            String username = input.nextLine();
+
+            System.out.print("Sifreniz: ");
+            String password = input.nextLine();
+
+            if (username.equals(correctUsername) && password.equals(correctPassword)) {
+                System.out.println("Giris yaptiniz!");
+                isLoggedIn = true;
+                break;
+            } else {
+                System.out.println("Bilgileriniz yanlistir!");
+
+                System.out.print("Sifirlamak ister misiniz (1 => Evet, 2 => Hayir): ");
+                int sifirlama = input.nextInt();
+                input.nextLine();
+                if (sifirlama == 1) {
+                    System.out.print("Yeni sifrenizi giriniz: ");
+                    String newPassword = input.nextLine();
+
+                    if (newPassword.equals(correctPassword)) {
+                        System.out.println("Bu sifre daha once kullanildi. Baska bir sifre giriniz!");
+                    } else {
+                        correctPassword = newPassword;
+                        System.out.println("Yeni sifreniz basariyla kaydedildi.");
+                    }
+                } else if (sifirlama != 2) {
+                    System.out.println("Geçersiz bir secim yaptiniz. Program sonlandiriliyor.");
+                    return;
+                }
+            }
+        }
+
+        if (!isLoggedIn) {
+            System.out.println("Giris hakkiniz dolmustur. Program sonlandiriliyor.");
+        }
+
+        input.close();
+    }
+}
