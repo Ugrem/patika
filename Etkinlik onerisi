@@ -1,0 +1,27 @@
+
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int c=0;
+        System.out.println("Hava sicakligini giriniz,lutfen: ");
+        c=sc.nextInt();
+
+        if (c<5){
+            System.out.println("Kayak yapmayı öneriyorum");
+
+        }
+        if (c>=5 && c<=15){
+            System.out.println("Sinema");
+        }
+        if (c>=15 && c<=24){
+            System.out.println("Piknik");
+
+        }
+        if (c>25){
+            System.out.println("Yuzme");
+        }
+    }
+    }
+
