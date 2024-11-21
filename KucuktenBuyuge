@@ -1,0 +1,81 @@
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+
+        int a, b, c, enb, enk;
+        System.out.println("A=");
+        a = sc.nextInt();
+        System.out.println("B=");
+        b = sc.nextInt();
+        System.out.println("C=");
+        c = sc.nextInt();
+enb=a;
+enk=a;
+
+//        enb = a;
+//        enk = a;
+//        if (enb < b) {
+//            enb = b;
+//        }
+//        if (enb < c) {
+//            enb = c;
+//        }
+//
+//        if (enk > b) {
+//            enk =b;
+//        }
+//        if (enk < c) {
+//            enk= c;
+//        }
+//        System.out.println("enbuyuk " + enb);
+//        if (a != enb && a != enk) {
+//            System.out.println(a);
+//
+//
+//        } else if (b != enb && b != enk) {
+//            System.out.println(b);
+//
+//        } else {
+//            System.out.println(c);
+//
+//        }
+//        System.out.println("kucuk " + enk);
+//    }
+
+
+    if (b>enb){
+        enb=b;
+    }
+    if (c>enb){
+        enb=c;
+    }
+
+    if (b<enk){
+        enk=b;
+    }
+    if (c<enk){
+        enk=c;
+    }
+    int midle=a;
+
+    if(b !=enk && b !=enb){
+        midle=b;
+    }
+    if(c !=enk && c !=enb){
+        midle=c;
+    }
+
+        System.out.println(enk);
+        System.out.println(midle);
+        System.out.println(enb);
+
+  }
+
+}
+
+
