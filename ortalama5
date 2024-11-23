@@ -1,0 +1,53 @@
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double mat, turkce, fizik, kimya, muzik;
+        boolean result = true;
+        System.out.print("Matematik notunuz: ");
+        mat = sc.nextDouble();
+
+
+        System.out.print("Türkçe notunuz: ");
+        turkce = sc.nextDouble();
+        System.out.print("Fizik notunuz: ");
+        fizik = sc.nextDouble();
+        System.out.print("Kimya notunuz: ");
+        kimya = sc.nextDouble();
+        System.out.print("Müzik notunuz:");
+        muzik = sc.nextDouble();
+
+        if (mat>100 || 0>mat ) {
+            System.out.println("Gecersiz not! Hesaplanmaz!");
+            result = false;
+        }else if(turkce>100 || 0>turkce){
+            System.out.println("Gecersiz not! Hesaplanmaz!");
+            result = false;
+        }else if(fizik>100 || 0>fizik){
+            System.out.println("Gecersiz not! Hesaplanmaz!");
+            result = false;
+        } else if (kimya>100 || 0>kimya) {
+            System.out.println("Gecersiz not! Hesaplanmaz!"); result = false;
+        }else if(muzik>100 || 0>muzik) {
+            System.out.println("Gecersiz not! Hesaplanmaz!"); result = false;
+        }
+
+if (result==true) {
+    double ort = (mat + fizik + turkce + kimya + muzik) / 5;
+    if (ort <= 55) {
+        System.out.println("Sınıfta kaldınız, seneye tekrar görüşmek üzere!");
+        System.out.println("Ortalamanız:" + ort);
+    } else {
+        System.out.println("Tebrikler, sınıfi geçtiniz!");
+        System.out.println("Ortalamınız: " + ort);
+    }
+}
+
+    }
+
+}
+
+
